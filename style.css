@@ -1,0 +1,111 @@
+/* Basic page styling */
+body {
+    background-color: #fff; /* White background */
+    color: #333; /* Dark text color for contrast */
+    font-family: 'Verdana', sans-serif;
+    text-align: center;
+    padding: 50px;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the content */
+    overflow: hidden;
+    position: relative; /* To position hearts */
+}
+
+/* Style for the Valentine's Day message box */
+.valentine-message-box {
+    font-size: 36px;
+    color: #ff6f61; /* Pinkish color */
+    font-weight: bold;
+    margin-bottom: 40px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+
+.click-here {
+    background-color: #ff6f61; /* Pink background */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.click-here:hover {
+    background-color: #ff4a3d; /* Darker pink on hover */
+}
+
+/* Hidden message */
+.message-box {
+    font-size: 22px;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+    margin-top: 20px;
+}
+
+/* Style for hearts scattered in the background */
+.heart {
+    font-size: 60px;
+    color: #ff6f61; /* Pink color */
+    position: absolute;
+    animation: heartAnimation 6s infinite linear;
+}
+
+@keyframes heartAnimation {
+    0% {
+        top: 10%;
+        left: 10%;
+    }
+    25% {
+        top: 30%;
+        left: 40%;
+    }
+    50% {
+        top: 60%;
+        left: 70%;
+    }
+    75% {
+        top: 80%;
+        left: 20%;
+    }
+    100% {
+        top: 10%;
+        left: 90%;
+    }
+}
+
+/* Additional hearts to fill up the screen */
+.heart:nth-child(odd) {
+    animation-duration: 8s;
+}
+
+.heart:nth-child(even) {
+    animation-duration: 10s;
+}
+
+/* Link to second page */
+.go-to-second-page {
+    display: inline-block;
+    margin-top: 30px;
+    font-size: 20px;
+    color: #ff6f61;
+    text-decoration: none;
+    border: 2px solid #ff6f61;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.go-to-second-page:hover {
+    background-color: #ff6f61;
+    color: white;
+}
